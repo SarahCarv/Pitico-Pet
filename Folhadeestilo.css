@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --cor1: #CCAD91; 
+    --cor2: #332716;
+    --cor3: #043959;   
+    --cor4: #502B09;
+    --cor5: #FFF0E2;
+    --cor6: #331C06;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de Navegação */
+#Menu{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor1);
+    /* a ideia é fazer um degrade depois */
+}
+
+.logo{
+    flex:20%;
+    color: var(--cor3);
+    padding-right: 5%;
+    text-align: center;
+    font-size: 29px;
+    padding: 15px;
+    font-family: "Leckerli One", cursive;
+
+}
+
+.Nav{
+    flex: 60%;
+    text-decoration: none;
+    text-align: right;
+    padding: 24px;
+}
+
+.Nav a{
+    text-decoration: none;
+    font-size: 16px;
+    padding: 16px 10px;
+    color: black;
+    font-family: "Roboto", sans-serif;
+}
+
+.Nav a:hover{
+    color:var(--cor3);
+    border-top: 3px solid black;
+}
+
+#botao {
+    margin-left: 5%;
+    margin-right: 5%; ;
+    background-color: var(--cor4);
+    border-radius: 10%;
+    color: white;
+}
+
+#botao:hover{
+    border: none;
+    background-color: var(--cor3); 
+}
+
+@media screen and (max-width:730px) {
+    #Menu a {
+         font-size:12px;
+         padding: 8px 5px;
+    }
+    #botao{
+        display: none;
+        padding: 8px 10px;
+        font-size:12px;
+    }
+    .logo h1{
+       font-size: 17px;
+    }
+    .logo{
+        margin-left:5%;
+        padding:0;
+        text-align: left;
+    }
+}
+    
+
+/* Header */
+.home {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.HeadLine {
+    flex: 40%;
+    margin-left: 5%;
+   text-align: center;
+}
+
+.HeadLine h2{
+    padding:0;
+    font-size: 5.5rem;
+    margin: 0;
+    /* color: ; */
+} 
+
+.HeadLine h3 {
+    font-family: "Leckerli One", cursive;
+    font-size: 1.5rem;
+}
+
+#titulo{
+    padding-top: 20%;
+}
+
+.HeadLine p{
+    margin-left: 20%;
+    color: var(--cor4);
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    padding-top: 4%;
+    max-width: 60%;
+}
+
+#botao2 {
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%; ;
+    background-color: var(--cor3); 
+    border-radius: 10%;
+    color: white;
+    text-decoration: none;
+    margin-top: 5%;
+    padding: 16px 10px;
+    font-family: "Roboto", sans-serif;
+
+}
+
+#botao2:hover{
+    background-color: var(--cor4);
+}
+
+.img-Headline{
+    flex:40%;
+    margin-right: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+}
+
+#ImagemLayout{
+    max-width: 100%;
+    padding-top: 5%;
+    padding-left: 20%;
+}
+
+body{
+    background-color: var(--cor5);
+}
+
+@media screen and (max-width:1024px) {
+    .home{
+    display: inline-block;
+    margin-right:2%;
+    }
+    #ImagemLayout{
+    display: none;
+    }
+    .home h2{
+    font-size: 4rem;
+    }
+    .home h3{
+    font-size: 1.3rem;
+    }
+}
+
+/* Cards 1 de serviços oferecidos */
+.nossosservicos{
+    display: inline-block;
+    margin-top: 80px;
+    margin-inline: 5%;
+    text-align: center;
+    padding: 5%;
+}
+
+section h2{
+    width: 100%;
+    font-size: 50px;
+    margin: 0;
+    font-family: "Leckerli One", cursive;
+    font-weight: bold;
+    color: var(--cor3);
+    margin-bottom: 5%;
+}
+
+.card{
+    border: 1px solid var(--cor4);
+    display: inline-block;
+    width: 27%;
+    padding: 20px;
+    margin: 1%;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+}
+
+.card h3{
+    padding-bottom: 3%;
+}
+
+.cardOculto{
+    display: none;
+}
+
+.cardOculto h2{
+    padding-bottom: 100px;
+}
+
+#maiorcard{
+    padding-top: 29px;
+    padding-bottom: 6px;
+}
+
+.cardOculto p{
+    padding-top: 20px;
+}
+
+.cardOculto a {
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+.card:hover {
+    background-color: var(--cor4);
+    color: white;
+}
+
+.card:hover img{
+    display: none;
+}
+
+.card:hover .cardoriginal{
+    display:none;
+}
+
+.card:hover .cardOculto{
+    display: block;
+}
+
+@media screen and (max-width:1024px){
+    .nossosservicos{
+    display: block;
+    margin-inline: 5%;
+    text-align: center;
+    padding: 5%;
+    }
+    section h2{
+    font-size:2rem;
+    }
+    .card{
+    border: 1px solid var(--cor4);
+    display: block;
+    width:100%;
+    margin-bottom: 9%;
+    margin-top:3%;
+    padding: 2%;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    }
+}    
+
+/* Sobre a loja */
+#Sobrenos {
+    margin-inline: 5%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    align-items: center;
+}
+
+.Quemsomos{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    padding-inline: 8%;
+    font-size: 1.2rem;
+}
+
+#Imagemsobrenos{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    max-width: 15rem;
+    padding-inline: 42%;
+}
+
+@media screen and (max-width:1024px){
+    .img-Sobrenos{
+    padding-top:15%;
+    padding-bottom: 15%;
+    padding-right:51%;
+    }
+    .Quemsomos p{
+    font-size: 1rem;
+    }
+}
+    
+
+/* Feedback */
+footer{
+    margin: 0;
+}
+
+.Feedback{
+    width: 30%;
+    max-height: max-content;
+    margin-left: 35%;
+    margin-right: 35%;
+    text-align: center;
+}
+
+fieldset {
+    border: 2px solid var(--cor3);
+    border-radius: 5px;
+    padding: 1rem;
+    }
+
+legend {
+    color: var(--cor4);
+    padding:0 0.5rem;
+    font-size: medium;
+    font-family: "Roboto", sans-serif;
+    }
+
+textarea {
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid var(--cor3);
+    background-color: transparent;
+}
+
+button {
+    background-color:#CCAD91;
+    border: none;
+    padding: 0.8rem;
+    color:#502B09;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+
+.Feedback button:hover{
+    border: none;
+    color: white;
+    background-color:var(--cor4); 
+}
+
+/* Rodape */
+.Rodape{
+    padding: 2rem;
+    text-align: center;
+    margin-top:100px;
+    height: 300px;
+    background-image: linear-gradient(180deg, var(--cor4), black);
+    border-top: 5px solid var(--cor2);
+    Color:white;
+
+}
+
+.Rodape a {
+    text-decoration: none;
+    color: white;
+    Cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    }
+
+ .Rodape h2 {
+    Font-size: 3rem;
+    color: white;
+    font-family: "Leckerli One", cursive;
+    padding-bottom:3rem;
+    padding-top: 2rem;
+ }
+
+  #Mobile .Feedback{
+    display:none;
+    }
+
+@media screen and (max-width:730px){
+    #Desktop .Feedback{
+        display: none;
+    }
+    #Mobile .Feedback{
+        display: block;
+        margin:5%;
+    }
+    fieldset{
+        padding: 7px;
+    }
+    .Feedback h2{
+        width:300px;
+        display: block;
+        font-size:1.7rem;
+        padding-left:30%;
+        padding-top:30%;    
+        }
+    .Rodape h2{
+        font-size:2rem;
+    }
+    .Rodape p {
+        font-size: 13px;
+    }
+}
